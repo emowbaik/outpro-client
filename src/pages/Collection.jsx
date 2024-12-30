@@ -2,7 +2,7 @@
 
 const Collection = () => {
   return (
-    <div>Collection Page</div>
+    <div>Collection page</div>
   )
 }
 
