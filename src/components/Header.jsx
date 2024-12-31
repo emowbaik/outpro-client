@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { Link } from "react-router-dom"
 import Navbar from "./Navbar"
-import { FaBarsStaggered } from "react-icons/fa6"
+import { FaBarsStaggered, FaRegCircleUser } from "react-icons/fa6"
 import { FaSearch } from "react-icons/fa"
 import { TbBasket, TbUserCircle } from "react-icons/tb"
 import { RiUserLine } from "react-icons/ri"
@@ -11,6 +11,8 @@ const Header = () => {
 
 const [token, setToken] = useState('')
 const [menuOpened, setmenuOpened] = useState(false)
+
+const toggleMenu = ()=> setmenuOpened((prev)=> !prev)
 
   return (
     <header className="max-padd-container w-full z-50">
@@ -30,13 +32,13 @@ const [menuOpened, setmenuOpened] = useState(false)
             {/* button right side */}
             <div className="flex-1 flex items-center justify-end gap-x-2 xs:gap-x-8">
                 {/* menu toggle */}
-                <FaBarsStaggered className="xl:hidden cursor-pointer text-xl"/>
+                <FaBarsStaggered onClick={toggleMenu}  className="xl:hidden cursor-pointer text-xl"/>
                 {/* search icon */}
                 <FaSearch className="text-lg cursor-pointer"/>
                 {/* cart */}
                 <Link to={''} className="flex relative">
                 <TbBasket className="text-[27px]"/>
-                <span className="bg-secondary text-white text-[12px] font-semibold left-1.5 -top-3.5 flexCenter w-4 h-4 rounded-full shadow-md">0</span>
+                <span className="bg-secondary text-white text-[12px] font-semibold absolute left-1.5 -top-3.5 flexCenter w-4 h-4 rounded-full shadow-md">0</span>
                 </Link>
                 {/* user profile */}
                 <div className="group relative">
