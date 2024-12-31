@@ -1,4 +1,4 @@
-// import React from 'react'
+import React, { useState } from 'react'
 
 import { Link } from "react-router-dom"
 import Navbar from "./Navbar"
@@ -8,11 +8,9 @@ import { TbBasket, TbUserCircle } from "react-icons/tb"
 import { RiUserLine } from "react-icons/ri"
 
 const Header = () => {
-    const token = 0;
-    const menuOpened = false;
 
-// const [token, setToken] = useState('')
-// const [menuOpened, setmenuOpened] = useState(false)
+const [token, setToken] = useState('')
+const [menuOpened, setmenuOpened] = useState(false)
 
   return (
     <header className="max-padd-container w-full z-50">

@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = ({containerStyles}) => {
@@ -6,7 +6,7 @@ const Navbar = ({containerStyles}) => {
     {path: '/', title: 'Home'},
     {path: '/collection', title: 'Collection'},
     {path: '/testimonial', title: 'Testimonial'},
-    {path: '/mailto:info@outpro.com', title: 'Contact'},
+    {path: '/mailto:alamsantoso.12@gmail.com', title: 'Contact'},
   ]
 
   return (

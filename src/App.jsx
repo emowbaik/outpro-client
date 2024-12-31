@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import Header from './components/Header'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
@@ -16,10 +16,10 @@ const App = () => {
         <Route path='/' element={<Home />}/>
         <Route path='/collection' element={<Collection />}/>
         <Route path='/product/:productId' element={<Product />}/>
-        <Route path='/testimonials' element={<Testimonials />}/>
+        <Route path='/testimonial' element={<Testimonials />}/>
         <Route path='/contact' element={<Contact />}/>
       </Routes>
-      <Navbar />
+      {/* <Navbar /> */}
     </main>
   )
 }
