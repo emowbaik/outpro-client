@@ -9,8 +9,10 @@ import { RiUserLine } from "react-icons/ri"
 
 const Header = () => {
     const token = 0;
+    const menuOpened = false;
 
 // const [token, setToken] = useState('')
+// const [menuOpened, setmenuOpened] = useState(false)
 
   return (
     <header className="max-padd-container w-full z-50">
@@ -24,7 +26,7 @@ const Header = () => {
 
             {/* Navbar */}
             <div className="flex-1">
-                <Navbar />
+                <Navbar containerStyles={`${menuOpened ? "flex items-start flex-col gap-y-8 fixed top-16 right-6 p-5 bg-white rounded-xl shadow-md w-52 ring-1 ring-slate-900/5 z-50" : "hidden xl:flex gap-x-5 xl:gap-x-10 medium-15 ring-1 ring-slate-900/5 rounded-full p-1"}`}/>
             </div>
 
             {/* button right side */}
